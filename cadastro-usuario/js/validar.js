@@ -7,6 +7,7 @@ var emailHelp = document.querySelector("#inputEmailHelp");
 var senha = document.querySelector("#inputPassword");
 var senhaHelp = document.querySelector("#inputPasswordHelp");
 var nivel = document.getElementById('passStrengthMeter');
+var btnMostraSenha = document.getElementById('btnMostrar');
 
 nome.addEventListener('focusout', validarNome);
 
@@ -107,4 +108,10 @@ senha.addEventListener('focusout', () => {
         senhaHelp.textContent = "";
         console.log(senha.value, senha.value.length)
     }
+});
+
+btnMostraSenha.addEventListener('click', function () {
+    var type = senha.getAttribute('type') === 'password' ? 'text' : 'password';
+    senha.setAttribute('type', type);
+    this.textContent = type === 'password' ? 'Mostrar' : 'Esconder';
 });
