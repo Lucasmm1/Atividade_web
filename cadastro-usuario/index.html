@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
-   
-    <script type = "text/javascript" src="./js/validar.js" defer></script> 
+
+    <script type="text/javascript" src="./js/validar.js" defer></script>
     <title>Cadastro de Usuário</title>
 </head>
 
@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <form id="singleForm" action="javascript:void(0);">
+                <form id="singleForm" action="javascript:void(0);" onsubmit="return validarFormulario()">
                     <div class="mb-3">
                         <label for="inputName" class="form-label">Primeiro Nome</label>
                         <input type="text" class="form-control" id="inputName" required>
@@ -34,7 +34,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="inputEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+                        <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                            required>
                         <div id="inputEmailHelp" class="form-text"></div>
                     </div>
                     <div class="mb-3">
@@ -47,9 +48,9 @@
                             style="width: 100%;"></meter>
                         <div id="inputPasswordHelp" class="form-text"></div>
                         <div id="inputResult" class="form-text"></div>
-                    </div>                    
+                    </div>
                     <div class="mb-3 text-center">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
                     </div>
                 </form>
             </div>
